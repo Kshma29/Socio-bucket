@@ -1,4 +1,4 @@
-This is a clone of popular social media site-Instagram
+This is a social media website
 ## Tech-stack
     Back-end:
     MongoDB: Document database to store user data
