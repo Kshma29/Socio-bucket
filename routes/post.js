@@ -40,7 +40,7 @@ router.post('/createpost',requireLogin,(req,res)=>{
       return  res.status(422).json({error:"Please add all the fields"})
     }
     req.user.password = undefined
-    // We don't wanna add the password to the post info
+  
     const post = new Post({
         title,
         body,
@@ -123,7 +123,7 @@ router.delete('/deletepost/:postId',requireLogin,(req,res)=>{
         if(err || !post){
             return res.status(422).json({error:err})
         }
-        // Since _id is object and objects equality cannot be checked directly for objects
+        //  _id is object and objects equality cannot be checked directly for objects
         if(post.postedBy._id.toString() === req.user._id.toString()){
               post.remove()
               .then(result=>{
