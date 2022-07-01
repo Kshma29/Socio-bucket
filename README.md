@@ -11,3 +11,4 @@ This is a clone of popular social media site-Instagram
     Front-end:
     React JS
     CSS
+    materialize-css
